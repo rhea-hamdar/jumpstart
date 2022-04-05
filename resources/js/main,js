@@ -1,0 +1,25 @@
+$(document).ready(function () {
+  $('.carousel').slick({
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    draggable: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  });
+
+  /*
+  $(document).on('scroll', () => {
+    $('nav').slideToggle();
+  })*/
+
+  $(document).on('scroll', () => {
+    var scroll = 0;
+    var scrollTop = $(this).scrollTop();
+
+    if (scrollTop - scroll > 50) {
+      var height = $('.navbar').css('height');
+    }
+
+  });
+});
